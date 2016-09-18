@@ -38,3 +38,6 @@ jspm_packages
 
 #WebStorm config folder
 .idea
+
+#nodejs folder
+node_modules

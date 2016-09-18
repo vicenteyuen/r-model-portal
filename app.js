@@ -1,3 +1,69 @@
+/**
+ * application startup web instance
+ */
+var Koa = require('koa');
+
+// Ensure we're in the project directory, so relative paths work as expected
+// no matter where we actually lift from.
+process.chdir(__dirname);
+
+
+// --- main program ---
+const app = new Koa();
+
+
+// --- setting views engine
+/*app.use(doT({
+ path:['./views'],
+ layout: true
+ //interpolation: { start: '<%', end: '%>' }
+ }));
+ */
+
+
+app.use((ctx, next) => {
+
+    //this.state.title='Hello Home';
+    //this.render('index');
+});
+
+app.use((ctx, next) => {
+    const start = new Date();
+    ctx.body = 'Hello Koa';
+});
+
+/*
+ app.use( (ctx, next ) => {
+ "use strict";
+ const start = new Date();
+ return next().then( () => {
+ const ms = new Date() - start;
+ console.log( '${ctx.method} ${ctx.url} - ${ms}ms' );
+ });
+ })
+
+
+
+
+ */
+/*
+ app.use(function *() {
+ this.body='Hello world';
+ });
+
+ app.use( function *(next) {
+ var start = new Date();
+ yield next;
+ var ms = new Date() - start;
+ this.set('X-Response-Time', ms + 'ms');
+ });
+ */
+
+
+app.listen(3000);
+
+
+/*
 var express = require('express');
 var path = require('path');
 var favicon = require('serve-favicon');
@@ -64,3 +130,4 @@ app.use(function (err, req, res, next) {
 
 
 module.exports = app;
+ */
