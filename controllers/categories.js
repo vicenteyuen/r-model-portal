@@ -1,7 +1,16 @@
 exports.install = function () {
-    F.route('/', view_index);
+    F.route('/ga', view_index);
     // or
     // F.route('/');
+};
+
+
+/**
+ * set the export uninstall
+ */
+exports.uninstall = function () {
+    "use strict";
+
 };
 
 /**
