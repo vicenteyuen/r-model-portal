@@ -7,16 +7,28 @@
     <!-- Bootstrap -->
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.4/css/bootstrap.min.css"
           integrity="sha384-2hfp1SzUoho7/TsGGGDaFdsuuDL0LX2hnUp6VkX3CUQ2K4K+xjboZdsXyp4oUHZj" crossorigin="anonymous">
+    <!-- append css -->
+    @{css('default.css')}
     @{scss('default.scss')}
 
+    <script src="/js/jquery-3.1.0.js"></script>
+    <script src="http://cdnjs.cloudflare.com/ajax/libs/tether/1.3.1/js/tether.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.4/js/bootstrap.min.js"
             integrity="sha384-VjEeINv9OSwtWFLAtmc4JCtEJXXBub00gtSnszmspDLCtC0I4z4nqz7rEFbIZLLU"
             crossorigin="anonymous"></script>
-    @{import('meta', 'head', 'default.css', 'default.js', 'favicon.ico')}
+
 </head>
 <body>
 
+<!-- nav bar start -->
+@{section('header')}
+<!-- nav bar end -->
+
 @{body}
+
+<!-- footer -->
+@{section('footer')}
+<!-- footer -->
 
 </body>
 </html>

@@ -11,4 +11,6 @@ function view_index() {
     var self = this;
     self.view('index');
 
+
+
 }

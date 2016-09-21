@@ -5,7 +5,9 @@
   "main": "debug.js",
   "dependencies": {
     "bootstrap": "^4.0.0-alpha.4",
+    "node-sass": "^3.10.0",
     "normalize.css": "^4.2.0",
+    "tether": "^1.3.7",
     "total.js": "^2.0.1"
   },
   "devDependencies": {},
