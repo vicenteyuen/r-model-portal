@@ -1,0 +1,60 @@
+/*
+ * This is a manifest file that'll be compiled into application.css, which will include all the files
+ * listed below.
+ *
+ * Any CSS and SCSS file within this directory, lib/assets/stylesheets, vendor/assets/stylesheets,
+ * or any plugin's vendor/assets/stylesheets directory can be referenced here using a relative path.
+ *
+ * You're free to add application-wide styles to this file and they'll appear at the bottom of the
+ * compiled file so the styles you add here take precedence over styles defined in any styles
+ * defined in the other CSS/SCSS files in this directory. It is generally better to create a new
+ * file per style scope.
+ *
+ *= require_self
+ */
+// Core variables and mixins
+@import "variables";
+@import "bootstrap-4/mixins";
+// Reset and dependencies
+@import "bootstrap-4/normalize";
+@import "bootstrap-4/print";
+// Core CSS
+@import "bootstrap-4/reboot";
+@import "bootstrap-4/type";
+@import "bootstrap-4/images";
+@import "bootstrap-4/code";
+@import "bootstrap-4/grid";
+@import "bootstrap-4/tables";
+@import "bootstrap-4/forms";
+@import "bootstrap-4/buttons";
+// Components
+@import "bootstrap-4/animation";
+@import "bootstrap-4/dropdown";
+@import "bootstrap-4/button-group";
+@import "bootstrap-4/input-group";
+@import "bootstrap-4/custom-forms";
+@import "bootstrap-4/nav";
+@import "bootstrap-4/navbar";
+@import "bootstrap-4/card";
+@import "bootstrap-4/breadcrumb";
+@import "bootstrap-4/pagination";
+@import "bootstrap-4/pager";
+@import "bootstrap-4/labels";
+@import "bootstrap-4/jumbotron";
+@import "bootstrap-4/alert";
+@import "bootstrap-4/progress";
+@import "bootstrap-4/media";
+@import "bootstrap-4/list-group";
+@import "bootstrap-4/responsive-embed";
+@import "bootstrap-4/close";
+// Components w/ JavaScript
+@import "bootstrap-4/modal";
+@import "bootstrap-4/tooltip";
+@import "bootstrap-4/popover";
+@import "bootstrap-4/carousel";
+// Utility classes
+@import "bootstrap-4/utilities";
+@import "bootstrap-4/utilities-background";
+@import "bootstrap-4/utilities-spacing";
+@import "bootstrap-4/utilities-responsive";
+@import "skin";

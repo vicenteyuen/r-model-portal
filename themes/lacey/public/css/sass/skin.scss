@@ -1,0 +1,207 @@
+// images           ===========================================================
+
+// code             ===========================================================
+
+// grid             ===========================================================
+
+// type             ===========================================================
+body {
+  font-family: $font-family-base;
+}
+
+// tables           ===========================================================
+.table-inverse,
+.thead-inverse,
+.thead-inverse th {
+  background-color: mix(black, $brand-primary, 60%);
+}
+
+.table-bordered {
+  border: $border-width solid $table-border-color;
+
+  th,
+  td {
+    border: none;
+  }
+  tr {
+    border-top: $border-width solid $table-border-color;
+  }
+
+  thead {
+    th,
+    td {
+      border-bottom-width: (2 * $border-width);
+    }
+  }
+}
+
+// forms            ===========================================================
+
+// buttons          ===========================================================
+.btn-primary-outline {
+  @include button-outline-variant($btn-primary-bg);
+  border: 1px solid;
+}
+
+.btn-secondary-outline {
+  @include button-outline-variant($btn-secondary-border);
+  border: 1px solid;
+}
+
+.btn-info-outline {
+  @include button-outline-variant($btn-info-bg);
+  border: 1px solid;
+}
+
+.btn-success-outline {
+  @include button-outline-variant($btn-success-bg);
+  border: 1px solid;
+}
+
+.btn-warning-outline {
+  @include button-outline-variant($btn-warning-bg);
+  border: 1px solid;
+}
+
+.btn-danger-outline {
+  @include button-outline-variant($btn-danger-bg);
+  border: 1px solid;
+}
+
+// animation        ===========================================================
+
+// dropdown         ===========================================================
+.dropdown-menu {
+  min-width: 120px;
+  font-size: $font-size-xs;
+  @include box-shadow(2px 2px 15px rgba(0, 0, 0, 0.575));
+}
+
+// button-group     ===========================================================
+
+// input-group      ===========================================================
+
+// custom-forms     ===========================================================
+
+// nav              ===========================================================
+.nav-stacked {
+  .nav-link {
+    padding: 0.5rem 1rem;
+  }
+}
+
+// navbar           ===========================================================
+.navbar {
+  border-bottom: $border-width solid $brand-info;
+  .navbar-brand {
+    padding: 0;
+  }
+  .nav-item {
+    font-weight: bold;
+    font-size: $font-size-xs;
+  }
+  .navbar-nav .nav-item + .nav-item {
+    margin-left: $spacer-x * 1.5;
+  }
+  .nav-link {
+    text-transform: uppercase;
+    @include transition(all 0.25s ease);
+  }
+  .dropdown-menu {
+    margin: 8px 0 0;
+    border-top: none;
+    border-top-left-radius: 0;
+    border-top-right-radius: 0;
+  }
+  .dropdown-item {
+    padding-left: 15px;
+  }
+
+  // primary active/hover
+  &.bg-inverse {
+    background-color: mix(black, $brand-primary, 60%);
+
+    .dropdown-menu {
+      border: $dropdown-border-width solid $dropdown-border-color;
+      background: mix(black, $brand-primary, 60%);
+      .dropdown-item {
+        color: $navbar-light-color;
+      }
+      .dropdown-item:focus, .dropdown-item:hover {
+        background-color: mix(white, $brand-primary, 70%);
+        color: $brand-primary;
+      }
+      .dropdown-divider {
+        @include nav-divider($brand-primary);
+      }
+    }
+  }
+  &.bg-faded {
+    .dropdown-menu {
+      margin: 2px 0 0; // override default ul
+      border: $dropdown-border-width solid $dropdown-border-color;
+      background: mix(white, $brand-info, 90%);
+      @include border-radius($border-radius);
+      @include box-shadow(0 6px 12px rgba(0, 0, 0, .175));
+
+      .dropdown-item:focus, .dropdown-item:hover {
+        background-color: mix(white, $brand-info, 70%);
+      }
+    }
+  }
+}
+
+// card             ===========================================================
+
+// breadcrumb       ===========================================================
+
+// pagination       ===========================================================
+
+// pager            ===========================================================
+
+// labels           ===========================================================
+
+// jumbotron        ===========================================================
+.jumbotron {
+  color: #fff;
+}
+
+// alert            ===========================================================
+
+// progress         ===========================================================
+
+// media            ===========================================================
+
+// list-group       ===========================================================
+
+// responsive-embed ===========================================================
+
+// close            ===========================================================
+
+// modal            ===========================================================
+
+// tooltip          ===========================================================
+
+// popover          ===========================================================
+.popover {
+  padding: 0;
+  .popover-title {
+    color: #fff;
+  }
+}
+
+// carousel         ===========================================================
+
+.btn:not(.btn-link),
+.card,
+.breadcrumb,
+.pagination,
+.pager li a,
+.jumbotron,
+.alert,
+.progress,
+.table,
+.nav-pills .nav-link.active,
+.list-group {
+  @include box-shadow(0 2px 2px rgba(0, 0, 0, .125));
+}

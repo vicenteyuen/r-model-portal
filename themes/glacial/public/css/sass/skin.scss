@@ -1,0 +1,118 @@
+// images           ===========================================================
+
+// code             ===========================================================
+
+// grid             ===========================================================
+
+// type             ===========================================================
+small,
+.small {
+  font-size: 75%;
+}
+
+// tables           ===========================================================
+.table {
+  border: $border-width solid $gray-dark;
+}
+
+@include table-row-variant(success, rgba($state-success-bg, .2));
+@include table-row-variant(info, rgba($state-info-bg, .2));
+@include table-row-variant(warning, rgba($state-warning-bg, .2));
+@include table-row-variant(danger, rgba($state-danger-bg, .2));
+
+// forms            ===========================================================
+
+// buttons          ===========================================================
+
+// animation        ===========================================================
+
+// dropdown         ===========================================================
+
+// button-group     ===========================================================
+
+// input-group      ===========================================================
+
+// custom-forms     ===========================================================
+
+// nav              ===========================================================
+
+// navbar           ===========================================================
+.navbar {
+  .nav-link {
+    @include transition(all 0.2s ease-in-out);
+  }
+
+  &.bg-faded {
+    background-color: mix(white, $brand-secondary, 80%);
+    .dropdown-menu {
+      background-color: mix(white, $brand-secondary, 80%);
+      .dropdown-item {
+        color: $navbar-light-color;
+        &:hover {
+          color: white;
+          background-color: $brand-secondary;
+        }
+      }
+    }
+  }
+  &.bg-inverse {
+    background-color: mix(black, $brand-primary, 80%);
+    .dropdown-menu {
+      background-color: mix(black, $brand-primary, 80%);
+      .dropdown-item {
+        color: white;
+        &:hover {
+          background-color: $brand-secondary;
+          color: $btn-secondary-color;
+        }
+      }
+    }
+  }
+}
+
+// card             ===========================================================
+
+// breadcrumb       ===========================================================
+
+// pagination       ===========================================================
+.pagination a {
+  @include transition(all 0.2s ease-in-out);
+  &:hover {
+    text-decoration: none;
+  }
+}
+
+// pager            ===========================================================
+.pager a {
+  @include transition(all 0.2s ease-in-out);
+  &:hover {
+    color: #fff;
+  }
+}
+
+// labels           ===========================================================
+
+// jumbotron        ===========================================================
+
+// alert            ===========================================================
+
+// progress         ===========================================================
+
+// media            ===========================================================
+
+// list-group       ===========================================================
+
+// responsive-embed ===========================================================
+
+// close            ===========================================================
+
+// modal            ===========================================================
+
+// tooltip          ===========================================================
+
+// popover          ===========================================================
+.popover-title {
+  color: #fff;
+}
+
+// carousel         ===========================================================
