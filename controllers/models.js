@@ -1,5 +1,5 @@
 exports.install = function () {
-    F.route('/categories', view_index);
+    F.route('/models/categories', view_index);
     // or
     // F.route('/');
 };
@@ -10,7 +10,7 @@ exports.install = function () {
 function view_index() {
     var self = this;
 
-    self.head('mods/models.js');
+    self.head('mods/models/categories.js');
 
     // --- custom view ---
     self.view('categories');
