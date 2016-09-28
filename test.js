@@ -7,7 +7,7 @@
 var fs = require('fs');
 var options = {};
 
-// options.tests = ['controllers', 'modules'];
+// options.tests = ['controllers', 'models'];
 // options.ip = '127.0.0.1';
 // options.port = parseInt(process.argv[2]);
 // options.config = { name: 'total.js' };

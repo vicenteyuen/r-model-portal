@@ -10,6 +10,10 @@ exports.install = function () {
 function view_index() {
     var self = this;
 
+
+    console.log( MODEL('/system/navmenu').getAll() );
+
+
     self.head('mods/default.js');
 
 
