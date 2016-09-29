@@ -12,6 +12,14 @@
         <div class="collapse navbar-toggleable-sm" id="main-navbar">
             <ul class="nav navbar-nav">
 
+
+                @{foreach menuItem in repository.menuModel}
+                <li class="nav-item">
+                    <a class="nav-link" href="/test">@{menuItem.text}</a>
+                </li>
+                @{end}
+
+
                 <li class="nav-item dropdown">
                     <a class="nav-link dropdown-toggle" aria-expanded="false" aria-haspopup="true" data-toggle="dropdown" href="#all-themes">Free Themes</a>
 
