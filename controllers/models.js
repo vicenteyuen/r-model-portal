@@ -10,6 +10,8 @@ exports.install = function () {
 function view_index() {
     var self = this;
 
+    self.repository.menuModel = MODEL('/system/navmenu').getAll();
+
     self.head('mods/models/categories.js');
 
     // --- custom view ---

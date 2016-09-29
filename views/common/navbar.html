@@ -14,41 +14,31 @@
 
 
                 @{foreach menuItem in repository.menuModel}
+
+                @{if menuItem.isleaf === true}
                 <li class="nav-item">
-                    <a class="nav-link" href="/test">@{menuItem.text}</a>
+                    <a class="nav-link" href="@{menuItem.link}">@{menuItem.text}</a>
                 </li>
+                @{else}
+                <li class="nav-item dropdown">
+
+                    <a class="nav-link dropdown-toggle" aria-expanded="false" aria-haspopup="true" data-toggle="dropdown" href="@{menuItem.link}">@{menuItem.text}</a>
+
+                    <!-- sub dropdown-menu , second node-->
+                    <div aria-labelledby="Preview" class="dropdown-menu">
+                        @{foreach subMenuItem in menuItem.children}
+                        @{if subMenuItem.isdivider === true}
+                        <div class="dropdown-divider"></div>
+                        @{else}
+                        <a class="dropdown-item" href="@{subMenuItem.link}">@{subMenuItem.text}</a>
+                        @{fi}
+                        @{end}
+                    </div>
+                </li>
+                @{fi}
                 @{end}
 
 
-                <li class="nav-item dropdown">
-                    <a class="nav-link dropdown-toggle" aria-expanded="false" aria-haspopup="true" data-toggle="dropdown" href="#all-themes">Free Themes</a>
-
-                    <!-- sub dropdown-menu -->
-                    <div aria-labelledby="Preview" class="dropdown-menu">
-                        <a class="dropdown-item" href="/themes/default">Default</a>
-                        <div class="dropdown-divider"></div>
-                        <a class="dropdown-item" href="/themes/flatro">Flatro</a>
-                        <a class="dropdown-item" href="/themes/glacial">Glacial</a>
-                        <a class="dropdown-item" href="/themes/glowworm">Glowworm</a>
-                        <a class="dropdown-item" href="/themes/lacey">Lacey</a>
-                        <a class="dropdown-item" href="/themes/slice">Slice</a>
-                        <a class="dropdown-item" href="/themes/wired">Wired</a>
-                    </div>
-                </li>
-
-                <li class="nav-item">
-                    <a class="nav-link" href="/categories">分类</a>
-                </li>
-
-                <!-- second item -->
-                <li class="nav-item">
-                    <a class="nav-link" href="/help">Help</a>
-                </li>
-
-                <!-- thrid item -->
-                <li class="nav-item">
-                    <a class="nav-link" href="/models/categories">分类</a>
-                </li>
 
             </ul>
 

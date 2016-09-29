@@ -22,7 +22,17 @@ exports.getAll = function(params , callback) {
         {
             id: 'category',
             text: '模型分类',
+            isleaf:false,
             children: [
+                {
+                    id: 'category-0',
+                    text: '全部',
+                    link: '/models/categories'
+                },
+                {
+                    id:'emp-1',
+                    isdivider:true
+                },
                 {
                     id: 'category-1',
                     text: '动漫CG',
@@ -44,6 +54,7 @@ exports.getAll = function(params , callback) {
         {
             id: 'blog',
             text: '博客',
+            isleaf: true,
             link: '/blob'
         }
     ];
