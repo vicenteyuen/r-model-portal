@@ -8,3 +8,13 @@ div.container-fluid {
     padding-left: 0%;
     padding-right: 0%;
 }
+
+/*  search page css define */
+li.pop-category {
+    display: inline-block;
+    margin-right: 0.4rem;
+}
+
+div.isotope-nav {
+    width: 80%;
+}

@@ -1,7 +1,7 @@
 exports.install = function () {
     F.route('/', view_index);
     // or
-    // F.route('/');
+    F.route('/search', view_search);
 };
 
 /**
@@ -20,4 +20,11 @@ function view_index() {
     self.view('index');
 
 
+}
+
+function view_search(opts) {
+    "use strict";
+    var self = this;
+
+    self.view('/list-show');
 }
