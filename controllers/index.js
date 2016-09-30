@@ -13,7 +13,7 @@ function view_index() {
     self.repository.menuModel = MODEL('/system/navmenu').getAll();
 
 
-    self.head('mods/default.js');
+    self.head('mods/index.js');
 
 
     // --- custom view ---
