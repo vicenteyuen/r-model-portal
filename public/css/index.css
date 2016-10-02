@@ -16,5 +16,19 @@ li.pop-category {
 }
 
 div.isotope-nav {
-    width: 80%;
+    width  : 80%;
+}
+
+.canvas-section {
+    background-color:#1fbda5;
+    height: 10rem;
+}
+
+.canvas-section-background {
+    background-blend-mode: overlay;
+    background-image: url("/images/bg-page-section-light.png");
+}
+
+.search-container-warpper {
+    padding-top: 1rem;
 }

@@ -26,5 +26,11 @@ function view_search(opts) {
     "use strict";
     var self = this;
 
+    self.repository.prodModels = MODEL('/prodmod/model').searchResultByText();
+
+    // --- show list field ---
+
+
+
     self.view('/list-show');
 }

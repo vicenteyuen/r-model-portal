@@ -100,7 +100,7 @@ function app() {
     function noop() {
     }
 
-    var pidIncrease, fork = require("child_process").fork, utils = require("total.js/utils"), directories = [directory + "/controllers", directory + "/definitions", directory + "/isomorphic", directory + "/models", directory + "/resources", directory + "/models", directory + "/source", directory + "/workers", directory + "/packages", directory + "/themes"], files = {}, force = !1, changes = [], app = null, status = 0, async = new utils.Async, pid = "", pidInterval = null, prefix = "----------------------------------------------------> ", isLoaded = !1, isSkip = !1, speed = TIME;
+    var pidIncrease, fork = require("child_process").fork, utils = require("total.js/utils"), directories = [directory + "/controllers", directory + "/definitions", directory + "/isomorphic", directory + "/prodmod", directory + "/resources", directory + "/prodmod", directory + "/source", directory + "/workers", directory + "/packages", directory + "/themes"], files = {}, force = !1, changes = [], app = null, status = 0, async = new utils.Async, pid = "", pidInterval = null, prefix = "----------------------------------------------------> ", isLoaded = !1, isSkip = !1, speed = TIME;
     process.on("SIGTERM", end), process.on("SIGINT", end), process.on("exit", end), process.pid > 0 && (console.log(prefix + "PID: " + process.pid + " (v" + VERSION + ")"), pid = path.join(directory, "debug.pid"), fs.writeFileSync(pid, process.pid), pidInterval = setInterval(function () {
         fs.exists(pid, function (exist) {
             exist || (fs.unlink(pid, noop), null !== app && (isSkip = !0, process.kill(app.pid)), process.exit(0))

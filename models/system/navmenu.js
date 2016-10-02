@@ -27,7 +27,7 @@ exports.getAll = function(params , callback) {
                 {
                     id: 'category-0',
                     text: '全部',
-                    link: '/models/categories'
+                    link: '/prodmod/categories'
                 },
                 {
                     id:'emp-1',
