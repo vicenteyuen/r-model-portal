@@ -12,7 +12,7 @@ function view_index() {
 
     self.repository.menuModel = MODEL('/system/navmenu').getAll();
 
-    self.head('mods/prodmod/categories.js');
+    self.head('app/prodmod/categories.js');
 
     // --- custom view ---
     self.view('categories');
@@ -26,10 +26,6 @@ function view_index() {
  */
 function view_model_info(modelId) {
     var self = this;
-
-    console.log('modelId ' + modelId);
-    console.log(self.req);
-    console.log(self.query);
 
 
     self.view('modelinfo');

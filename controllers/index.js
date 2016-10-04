@@ -12,10 +12,6 @@ function view_index() {
 
     self.repository.menuModel = MODEL('/system/navmenu').getAll();
 
-
-    self.head('mods/index.js');
-
-
     // --- custom view ---
     self.view('index');
 

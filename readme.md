@@ -5,3 +5,5 @@
 - Install Total.js via NPM `$ npm install total.js`
 - Download example
 - Run it `$ node debug.js`
+
+使用了RequireJs ，目前只支持2.1.x的版本，不能随便升级
