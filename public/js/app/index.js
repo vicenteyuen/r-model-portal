@@ -1,8 +1,8 @@
 /**
  * index page handle
  */
-requirejs(['common','template/doT'], function (common , dotEngine) {
+requirejs(['template/doT'], function ( doT) {
 
-    console.log('show jquery : ' + dotEngine);
+    console.log('show jquery : ' + doT);
 
 });

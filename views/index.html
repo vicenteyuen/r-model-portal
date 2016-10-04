@@ -5,7 +5,9 @@
 <!-- define javascript -->
 @{head('<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.isotope/3.0.1/isotope.pkgd.js"></script>')}
 @{head('<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.imagesloaded/4.1.1/imagesloaded.pkgd.min.js"></script>')}
-@{head('<script type="text/javascript" src="/js/lib/require.js" data-main="/js/app/index"></script>')}
+<!-- load common config -->
+@{head('<script type="text/javascript" src="/js/lib/require.js" data-main="/js/common"></script>')}
+@{head('<script type="text/javascript">requirejs(["app/index"]);</script>')}
 
 
 <!-- set content -->
