@@ -17,6 +17,26 @@ exports.uninstall = function(options) {
 
 exports.getAll = function(params , callback) {
 
+    var navDb = NOSQL('navigator');
+
+    navDb.find().make(function(builder) {
+        builder.callback(function(err , response) {
+
+            if (err) {
+                // --- return err ---
+            }
+
+            // --- response result handle ---
+            if (callback) {
+                callback(response);
+            }
+
+            //console.log( response);
+        })
+    });
+
+
+/*
 
     var output = [
         {
@@ -59,7 +79,11 @@ exports.getAll = function(params , callback) {
         }
     ];
 
+
+
+
     return output;
+    */
 
 };
 

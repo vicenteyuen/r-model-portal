@@ -10,12 +10,31 @@ exports.install = function () {
 function view_index() {
     var self = this;
 
-    self.repository.menuModel = MODEL('/system/navmenu').getAll();
+    var sTime = Date.now();
 
-    // --- custom view ---
-    self.view('index');
+    /**
+     * read data from async handle
+     * @type {*|Async}
+     */
+    var async = new Utils.Async();
 
+    async.await(function(next) {
+        MODEL('/system/navmenu').getAll({} , function( receiveModel ) {
+            self.repository.menuModel = receiveModel[0];
+            next();
+        });
 
+    });
+
+    // --- done ---
+    async.run(function() {
+        // --- custom view ---
+        self.view('index');
+
+        var diffTime = Date.now() - sTime;
+        console.log('use time : ' + diffTime);
+
+    });
 }
 
 function view_search(opts) {
@@ -25,8 +44,8 @@ function view_search(opts) {
     self.repository.prodModels = MODEL('/prodmod/model').searchResultByText();
 
     // --- show list field ---
-
-
-
     self.view('/list-show');
+
+    self.log();
+
 }
