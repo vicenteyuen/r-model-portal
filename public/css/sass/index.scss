@@ -1,6 +1,9 @@
+$blue: #3bbfce;
+$margin: 16px;
 .home-hero {
   background: #333 url(/images/fading-polygons-edd.png) left top repeat-x;
-  height: 420px
+  height: 420px;
+  background-color: $blue;
 }
 
 .isotope--grid-item {
