@@ -11,10 +11,20 @@ exports.install = function () {
     F.config['static-accepts']['.scss'] = true;
 
     F.onCompileStyle = function (filename, content) {
+        var self = this;
+
+        var checkCss = filename.indexOf('.css') !== -1;
+
+        if (checkCss) {
+            return content;
+        }
+
         var r = sass.renderSync({data: content, outputStyle: 'compressed'});
         return r.css.toString();
+
     };
 
+    // --- controller mapping ---
     F.helpers.scss = function (name, tag) {
         var self = this;
         var url = F._routeStatic(name, self.config['static-url-style']);
@@ -28,7 +38,7 @@ exports.install = function () {
 };
 
 function scss_compiler(req, res, isValidation) {
-    console.log(req.url);
+
 
     if (isValidation)
         return req.url.indexOf('.scss') !== -1 || req.url.indexOf('.sass') !== -1;

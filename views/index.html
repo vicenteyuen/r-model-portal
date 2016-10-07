@@ -1,6 +1,6 @@
 <!-- defined page header -->
+@{head('/css/app/common.css')}
 @{scss('/scss/app/index.scss')}
-<!--@{head('/css/app/sass/index.css')}-->
 
 <!-- define javascript -->
 @{head('<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.isotope/3.0.1/isotope.pkgd.js"></script>')}
@@ -17,7 +17,7 @@
 <div class="container-fluid" id="main">
 
     <!-- main banner -->
-    <div class="home-section home-hero">
+    <div class="home-section home-main">
 
         <div class="container">
 
@@ -26,11 +26,14 @@
                 <p class="home-hero-subtitle">Publish your 3D files, explore a million things in VR.</p>
 
                 <div class="home-hero-actions">
-                    <a class="button btn-full btn-large btn-primary" href="/signup" data-action="open-signup">Join for free</a>
+                    <a class="btn btn-primary" href="/signup" data-action="open-signup">Join for free</a>
                 </div>
             </div>
 
         </div>
+    </div>
+
+    <div class="home-section home-search">
     </div>
 
 

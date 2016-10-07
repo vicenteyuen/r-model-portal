@@ -1,4 +1,4 @@
-<nav class="navbar navbar-fixed-top navbar-dark bg-inverse" role="navigation">
+<nav class="navbar navbar-fixed-top navbar-dark" role="navigation">
     <div class="container">
         <a class="navbar-brand" href="http://www.bs4themes.com/">
             <i class="fa fa-home"></i>
@@ -11,16 +11,14 @@
         <!-- nav item -->
         <div class="collapse navbar-toggleable-sm" id="main-navbar">
             <ul class="nav navbar-nav">
-
-
                 @{foreach menuItem in repository.menuModel}
 
                 @{if menuItem.isleaf === true}
-                <li class="nav-item">
+                <li class="nav-item nav-menu">
                     <a class="nav-link" href="@{menuItem.link}">@{menuItem.text}</a>
                 </li>
                 @{else}
-                <li class="nav-item dropdown">
+                <li class="nav-item dropdown nav-menu ">
 
                     <a class="nav-link dropdown-toggle" aria-expanded="false" aria-haspopup="true" data-toggle="dropdown" href="@{menuItem.link}">@{menuItem.text}</a>
 
@@ -37,21 +35,16 @@
                 </li>
                 @{fi}
                 @{end}
-
-
-
             </ul>
 
             <!-- second navbar-nav -->
             <ul class="nav navbar-nav hidden-sm-down pull-xs-right">
                 <li class="nav-item nav-btn-group">
-                    <a class="" href="#"><i class="fa fa-user fa-fw" aria-hidden="true"></i>&nbsp; @{resource('login')}</a>
-
+                    <a class="nav-link login btn btn-sm btn-primary" href="#"><i class="fa fa-user fa-fw"
+                                                                                 aria-hidden="true"></i>&nbsp;
+                        @{resource('login')}</a>
                 </li>
             </ul>
-
-
-
         </div>
 
     </div>

@@ -1,0 +1,25 @@
+body {
+    font-family: "Lucida Grande", "Lucida Sans", "Lucida Sans Unicode", Verdana, sans-serif;
+}
+
+a {
+    color: white;
+}
+
+.btn-primary {
+    background-color: #111;
+    border-color: #111;
+}
+
+a.btn-primary:hover {
+    background-color: #1f1f1f;
+    border-color: #1f1f1f;
+}
+
+.nav {
+    margin-left: 10rem;
+}
+
+.navbar-dark {
+    background-color: #111;
+}

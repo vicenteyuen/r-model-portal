@@ -1,10 +1,64 @@
-$blue: #3bbfce;
+$blue: rgb(28, 170, 217);
+$black: #1d1d1d;
 $margin: 16px;
+
+$nav-font-size: 0.9rem;
+
+/* navigator scss  */
+nav {
+
+  font-size: $nav-font-size;
+
+  .navbar-nav {
+
+    li.nav-menu {
+      a.nav-link {
+
+        &:hover {
+          color: #ffffff;
+        }
+
+      }
+
+    }
+
+    li.nav-btn-group {
+
+      a.nav-link {
+        color: #ffffff;
+
+        &:hover {
+          color: #ffffff;
+        }
+
+      }
+    }
+
+  }
+}
+
+
 
 /* append bootstrap cls */
 .m-y-2 {
   height: 0.4rem;
 }
+
+/* main div container */
+#main {
+
+  .home-main {
+    background: $black url(/images/bg-page-section-light.png) left top repeat-x;
+    height: 26rem;
+  }
+
+  .home-search {
+    background: $blue url(/images/bg-page-section-light.png) left top repeat-x;
+    height: 10rem;
+  }
+}
+
+
 
 div.container-fluid {
   padding-left: 0%;
@@ -35,11 +89,6 @@ div.isotope-nav {
   padding-top: 1rem;
 }
 
-.home-hero {
-  background: #333 url(/images/fading-polygons-edd.png) left top repeat-x;
-  height: 420px;
-
-}
 
 .isotope--grid-item {
   width: 25%;
@@ -61,15 +110,6 @@ figure.effect-oscar img {
 
 .category-exhibition {
   width: 80%;
-}
-
-
-
-
-.home-hero {
-  background: #333 url(/images/fading-polygons-edd.png) left top repeat-x;
-  height: 420px;
-  background-color: $blue;
 }
 
 .isotope--grid-item {
