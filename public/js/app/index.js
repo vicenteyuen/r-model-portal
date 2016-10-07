@@ -1,8 +1,8 @@
 /**
  * index page handle
  */
-requirejs(['template/doT'], function ( doT) {
+requirejs(['template/doT', 'three'], function (doT, _three) {
 
-    console.log('show jquery : ' + doT);
+    console.log(_three.REVISION);
 
 });
