@@ -1,7 +1,8 @@
 var COOKIE = 'lang';
-var allowed = { sk: true, en: true, cz: true };
+var allowed = {zh_CN: true, en: true};
 
 F.onLocate = function(req, res) {
+
 
     var language = req.query.lang;
 
@@ -14,6 +15,7 @@ F.onLocate = function(req, res) {
     }
 
     language = req.cookie(COOKIE);
+
     if (language) {
         if (allowed[language])
             return language;
@@ -26,7 +28,6 @@ F.onLocate = function(req, res) {
     if (language.indexOf('zh_CN') > -1) {
         return 'zh_CN';
     }
-
 
 
     return 'zh_CN';

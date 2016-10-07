@@ -28,6 +28,7 @@ function view_index() {
 
     // --- done ---
     async.run(function() {
+
         // --- custom view ---
         self.view('index');
 

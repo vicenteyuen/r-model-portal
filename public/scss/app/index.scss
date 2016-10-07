@@ -1,0 +1,95 @@
+$blue: #3bbfce;
+$margin: 16px;
+
+/* append bootstrap cls */
+.m-y-2 {
+  height: 0.4rem;
+}
+
+div.container-fluid {
+  padding-left: 0%;
+  padding-right: 0%;
+}
+
+/*  search page css define */
+li.pop-category {
+  display: inline-block;
+  margin-right: 0.4rem;
+}
+
+div.isotope-nav {
+  width: 80%;
+}
+
+.canvas-section {
+  background-color: #1fbda5;
+  height: 10rem;
+}
+
+.canvas-section-background {
+  background-blend-mode: overlay;
+  background-image: url("/images/bg-page-section-light.png");
+}
+
+.search-container-warpper {
+  padding-top: 1rem;
+}
+
+.home-hero {
+  background: #333 url(/images/fading-polygons-edd.png) left top repeat-x;
+  height: 420px;
+
+}
+
+.isotope--grid-item {
+  width: 25%;
+}
+
+.isotope--grid-item--width2 {
+  width: 50%;
+}
+
+figure.effect-oscar img {
+  display: block;
+  width: 100%;
+  opacity: 1;
+  -webkit-transition: opacity 0.35s;
+  transition: opacity 0.35s;
+  -webkit-backface-visibility: hidden;
+  backface-visibility: hidden;
+}
+
+.category-exhibition {
+  width: 80%;
+}
+
+
+
+
+.home-hero {
+  background: #333 url(/images/fading-polygons-edd.png) left top repeat-x;
+  height: 420px;
+  background-color: $blue;
+}
+
+.isotope--grid-item {
+  width: 25%;
+}
+
+.isotope--grid-item--width2 {
+  width: 50%;
+}
+
+figure.effect-oscar img {
+  display: block;
+  width: 100%;
+  opacity: 1;
+  -webkit-transition: opacity 0.35s;
+  transition: opacity 0.35s;
+  -webkit-backface-visibility: hidden;
+  backface-visibility: hidden;
+}
+
+.category-exhibition {
+  width: 80%;
+}

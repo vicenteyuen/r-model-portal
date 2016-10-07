@@ -2,8 +2,11 @@
 // $ total --translate
 // $ total --translate "Create translation hash from this text."
 
+// common base
+login     : Login
+
 // index.html
-T-1397214398     : Welcome
+
 
 // layout.html
 T-397449933      : Message:
