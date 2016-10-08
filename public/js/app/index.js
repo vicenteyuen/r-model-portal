@@ -3,12 +3,20 @@
  */
 requirejs(['template/doT', 'three'], function (doT, THREE) {
 
+    // change dom element
+    var domCanvas = document.getElementById('main-canvas');
+    var width = domCanvas.clientWidth;
+    var height = domCanvas.clientHeight;
+
+
     var scene = new THREE.Scene();
     var camera = new THREE.PerspectiveCamera(75, window.innerWidth / window.innerHeight, 0.1, 1000);
 
-    var renderer = new THREE.WebGLRenderer();
-    renderer.setSize(window.innerWidth, window.innerHeight);
-    document.body.appendChild(renderer.domElement);
+    var renderer = new THREE.WebGLRenderer({
+        antialias: true
+    });
+    renderer.setSize(width, height);
+    domCanvas.appendChild(renderer.domElement);
 
 
     var geometry = new THREE.CubeGeometry(1, 1, 1);

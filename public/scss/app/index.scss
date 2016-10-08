@@ -50,12 +50,19 @@ nav {
   .home-main {
     background: $black url(/images/bg-page-section-light.png) left top repeat-x;
     height: 26rem;
+
+    div.row {
+      padding-top: 1rem;
+      padding-bottom: 1rem;
+    }
+
   }
 
   .home-search {
     background: $blue url(/images/bg-page-section-light.png) left top repeat-x;
     height: 10rem;
   }
+
 }
 
 
