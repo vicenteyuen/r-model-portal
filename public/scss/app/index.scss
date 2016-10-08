@@ -61,6 +61,15 @@ nav {
   .home-search {
     background: $blue url(/images/bg-page-section-light.png) left top repeat-x;
     height: 10rem;
+
+    div.container {
+      padding-top: 2rem;
+
+      .input-group {
+        width: 40%;
+      }
+    }
+
   }
 
 }
