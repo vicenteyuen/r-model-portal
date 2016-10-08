@@ -1,7 +1,7 @@
 /**
  * index page handle
  */
-requirejs(['template/doT', 'three'], function (doT, THREE) {
+requirejs(['template/doT', 'three' , 'three.loaders.fbx'], function (doT, THREE) {
 
     // change dom element
     var domCanvas = document.getElementById('main-canvas');
