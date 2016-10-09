@@ -1,7 +1,11 @@
 /**
  * index page handle
  */
-requirejs(['template/doT', 'three' , 'three.loaders.fbx'], function (doT, THREE) {
+requirejs(['template/doT','three' ,
+    'three.loaders.fbx',
+    'three.controls.orbit'
+    ], function (doT, THREE , _1 , _2) {
+
 
     // change dom element
     var domCanvas = document.getElementById('main-canvas');
