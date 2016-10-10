@@ -44,7 +44,7 @@ requirejs(['template/doT','three' ,
     };
 
     var loader = new THREE.FBXLoader(manager);
-    loader.load('models/fbx/xsi_man_skinning.fbx', function (object) {
+    loader.load('download/xsi_man_skinning.fbx', function (object) {
         object.traverse(function (child) {
             if (child instanceof THREE.Mesh) {
                 // pass
