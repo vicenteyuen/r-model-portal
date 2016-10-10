@@ -13,3 +13,6 @@ mail.address.bcc                :
 
 // server config
 default-port                    : 8000
+
+// --- set static file path ---
+static-url-model             : /models/

@@ -4,9 +4,6 @@ exports.install = function () {
     F.route('/', view_index);
     // or
     F.route('/search', view_search);
-
-
-    F.file('/*.*', media_file_access);
 };
 
 /**
@@ -53,17 +50,5 @@ function view_search(opts) {
     self.view('/list-show');
 
     self.log();
-
-}
-
-
-function media_file_access() {
-    "use strict";
-
-
-    var self = this;
-
-    self.file(F.path.public('models/fbx/xsi_man_skinning.fbx'), 'xsi_man_skinning.fbx');
-
 
 }
