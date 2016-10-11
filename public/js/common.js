@@ -6,7 +6,7 @@ requirejs.config({
     paths: {
         app: '../app',
         'template/doT': '/js/lib/doT/doT',
-        'three': '/js/lib/three/three',
+        'three': '/js/lib/three/three.min',
 
 
         'three.loaders.fbx': '/js/lib/three/_loaders/fbx',
