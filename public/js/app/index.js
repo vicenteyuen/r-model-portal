@@ -93,6 +93,7 @@ requirejs(['template/doT','three' ,
 
         renderer = new THREE.WebGLRenderer();
         renderer.setPixelRatio(window.devicePixelRatio);
+        renderer.setSize(width, height);
         //renderer.setSize( window.innerWidth, window.innerHeight );
         renderer.setClearColor(0x000000);
         container.appendChild(renderer.domElement);
