@@ -47,6 +47,9 @@ nav {
 /* main div container */
 #main {
 
+  padding-left: 0%;
+  padding-right: 0%;
+
   .home-main {
     background: $black url(/images/bg-page-section-light.png) left top repeat-x;
     height: 26rem;
@@ -72,18 +75,51 @@ nav {
 
       .input-group {
         width: 100%;
+
+        .form-control {
+          border: 0;
+        }
+
+        .input-group-addon {
+          width: 1rem;
+          border: 0;
+          background-color: #333333;
+          color: #ffffff;
+        }
       }
     }
 
   }
 
-}
+  /* row column   */
+  .category-exhibition {
+
+    h2 {
+      width: 45%;
+      margin: 2rem auto 0;
+    }
+
+    .isotope-nav {
+
+      ul {
+        list-style-type: none;
+        margin-top: 1rem;
+        margin-bottom: 1rem;
+
+        li {
+          margin-left: 1rem;
+          margin-right: 1rem;
+        }
+      }
+
+      a {
+        color: #666;
+      }
+    }
+
+  }
 
 
-
-div.container-fluid {
-  padding-left: 0%;
-  padding-right: 0%;
 }
 
 /*  search page css define */

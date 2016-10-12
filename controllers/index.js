@@ -47,7 +47,7 @@ function view_search(opts) {
     self.repository.prodModels = MODEL('/prodmod/model').searchResultByText();
 
     // --- show list field ---
-    self.view('/list-show');
+    self.view('/models/list');
 
     self.log();
 
