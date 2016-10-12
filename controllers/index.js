@@ -42,13 +42,43 @@ function view_index() {
 
 function view_search(opts) {
     "use strict";
+
     var self = this;
 
-    self.repository.prodModels = MODEL('/prodmod/model').searchResultByText();
+    var sTime = Date.now();
 
-    // --- show list field ---
-    self.view('/models/list');
+    /**
+     * read data from async handle
+     * @type {*|Async}
+     */
+    var async = new Utils.Async();
 
-    self.log();
+    async.await(function(next) {
+        MODEL('/system/navmenu').getAll({} , function( receiveModel ) {
+            self.repository.menuModel = receiveModel[0];
+            next();
+        });
+
+
+        self.repository.prodModels = MODEL('/prodmod/model').searchResultByText();
+
+    });
+
+    // --- done ---
+    async.run(function() {
+
+        // --- show list field ---
+        self.view('/models/list');
+
+        var diffTime = Date.now() - sTime;
+        console.log('use time : ' + diffTime);
+
+        self.log('parse search file');
+    });
+
+
+
+
+
 
 }

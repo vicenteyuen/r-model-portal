@@ -62,9 +62,6 @@ function scss_compiler(req, res, isValidation) {
             self.response404(req, res);
             return;
         }
-
-        console.log('return data : ' + data);
-
         var r = sass.renderSync({data: data.toString(), outputStyle: 'compressed'});
 
         // write compiled content into the temporary file
