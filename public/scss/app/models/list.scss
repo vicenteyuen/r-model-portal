@@ -30,9 +30,18 @@ $nav-font-size: 0.9rem;
   }
 
 
-
-  .search-container-warpper {
+  .search-area {
     padding-top: 1rem;
+    width: 40rem;
+    margin: 1rem auto 0;
+
+    .input-group {
+      margin: 0 auto 0;
+
+      width: 20%;
+
+    }
+
   }
 
 
