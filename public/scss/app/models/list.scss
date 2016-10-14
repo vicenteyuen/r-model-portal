@@ -32,17 +32,56 @@ $nav-font-size: 0.9rem;
 
   .search-area {
     padding-top: 1rem;
-    width: 40rem;
-    margin: 1rem auto 0;
+    width: 27rem;
+    margin: 0 auto 0;
 
     .input-group {
-      margin: 0 auto 0;
 
-      width: 20%;
+      input.form-control {
+        border: 0;
+        height: 3rem;
+      }
+
+      a {
+        border: 0;
+        background-color: #ffffff;
+        color: #666;
+        font-size: 1.3rem;
+
+        &:hover {
+          background-color: #e3e3e3;
+          color: #1fbda5;
+        }
+      }
+
+    }
+  }
+
+  .search-result-area {
+    width: 35rem;
+    margin: 0 auto 0;
+    color: #fff;
+    padding-top: 1rem;
+
+    text-align: center;
+
+    .search-result-counter {
+      margin-bottom: 0.8rem;
+    }
+
+    .keyword-result {
+      border-top: 1px solid rgba(255, 255, 255, 0.3);
+
+      p.author-search-result {
+        margin-top: 0.8rem;
+        font-size: 0.9rem;
+      }
 
     }
 
   }
+
+
 
 
   .isotope--grid-item {
