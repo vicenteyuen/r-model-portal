@@ -16,13 +16,10 @@
     <div class="row">
         <div class="col-md-12">
 
-            <div class="container isotope-nav" data-isotope-nav="isotope">
-                <ul>
-                    <li class="pop-category"><a href="#" class="active" data-filter="*">All</a></li>
-                    <li class="pop-category"><a href="#" data-filter=".web-design" class="">Web Design</a></li>
-                    <li class="pop-category"><a href="#" data-filter=".development" class="">Development</a></li>
-                    <li class="pop-category"><a href="#" data-filter=".joomla" class="">Joomla</a></li>
-                    <li class="pop-category"><a href="#" data-filter=".wordpress" class="">Wordpress</a></li>
+            <div class="container">
+                <ul class="nav nav-tabs" role="tablist">
+                    <li class="nav-item"><a href="#textSearch" class="nav-link active" role="tab" data-toggle="tab">文本搜索</a></li>
+                    <li class="nav-item"><a href="#imgSearch" class="nav-link" role="tab" data-toggle="tab">图片搜索</a></li>
                 </ul>
             </div>
 
@@ -35,37 +32,47 @@
 
         <!-- create a tab -->
         <div class="col-md-12 canvas-section canvas-section-background">
-            <div class="container">
 
-                <div class="search-area">
-                    <form class="form-search form-inline" action="/search" method="get" id="search_form">
-                        <div class="input-group">
-                            <input type="text" name="keyword" class="form-control">
-                            <a class="btn input-group-addon" href="javascript:document:search_form.submit();">
-                                <i class="fa fa-search fa-fw" aria-hidden="true"></i>
-                            </a>
+            <div class="container tab-content">
+
+                <!-- text search area -->
+                <div role="tabpanel" class="tab-pane" id="textSearch">
+
+                    <div class="search-area">
+                        <form class="form-search form-inline" action="/search" method="get" id="search_form">
+                            <div class="input-group">
+                                <input type="text" name="keyword" class="form-control">
+                                <a class="btn input-group-addon" href="javascript:document:search_form.submit();">
+                                    <i class="fa fa-search fa-fw" aria-hidden="true"></i>
+                                </a>
+                            </div>
+                        </form>
+                    </div>
+
+                    <div class="search-result-area">
+
+                        <h6 class="search-result-counter">
+                            你找到 <strong>2,101</strong> <em>VR/AR 模型</em>的记录
+                        </h6>
+
+
+                        <div class="keyword-result">
+                            <p class="author-search-result">
+                                使用的关键字查询是：
+                                <a href="/user/bootstrap">
+                                    <img src="https://0.s3.envato.com/files/383225.jpg" width="25" height="25"
+                                         alt="bootstrap">bootstrap
+                                </a>
+                            </p>
                         </div>
-                    </form>
-                </div>
 
-                <div class="search-result-area">
-
-                    <h6 class="search-result-counter">
-                        你找到 <strong>2,101</strong> <em>VR/AR 模型</em>的记录
-                    </h6>
-
-
-                    <div class="keyword-result">
-                        <p class="author-search-result">
-                            使用的关键字查询是：
-                            <a href="/user/bootstrap">
-                                <img src="https://0.s3.envato.com/files/383225.jpg" width="25" height="25"
-                                     alt="bootstrap">bootstrap
-                            </a>
-                        </p>
                     </div>
 
                 </div>
+
+                <div role="tabpanel" class="tab-pane" id="imgSearch">
+                </div>
+
 
             </div>
         </div>
@@ -73,17 +80,41 @@
 
     </div>
 
-
-
-
-    <!-- category shown images --->
+   <!-- category shown images --->
     <div class="row">
 
         <div class="col-lg-12">
-            <h1 class="page-header">Gallery</h1>
+            <!-- sort icon -->
+            <div class="container">
+
+                <div class="query-sorts">
+
+                    <label class="query-label">
+                        排序
+                    </label>
+
+                    <div class="options">
+                        <a class="option help" data-value="-likeCount" href="#">
+                            <div class="tooltip tooltip-down">收藏</div>
+                            <i class="icon fa fa-star"></i>
+                        </a>
+                        <a class="option help active" data-value="-viewCount" href="#">
+                            <div class="tooltip tooltip-down">浏览</div>
+                            <i class="icon custom-icons icon-eye-icon"></i>
+                        </a>
+                        <a class="option help" data-value="-publishedAt,-processedAt" href="#">
+                            <div class="tooltip tooltip-down">最近</div>
+                            <i class="icon fa fa-clock-o"></i>
+                        </a>
+                    </div>
+
+                </div>
+
+            </div>
+
         </div>
 
-        <div class="col-md-12">
+        <div class="col-lg-12">
 
             <!-- show container -->
             <div class="container category-exhibition">
@@ -99,6 +130,35 @@
                                 <img src="@{modelItem.image}" alt="text">
                             </figure>
                         </div>
+                        <div>
+                            <div class="model-card-name">
+
+
+
+
+
+                                <a class="model-name model-staffpicked" href="/models/7ede00c0dfe14574bd8f06ee36020609" title="swamp location">
+
+
+
+
+                                    <span class="model-name-label">swamp location</span>
+
+
+                                    <meta itemprop="award" content="Staff Pick">
+                                    <span class="flag-staffpicked" title="Staff Picks"></span>
+
+
+
+
+
+                                </a>
+
+
+
+                            </div>
+                        </div>
+
                     </div>
                     @{end}
 

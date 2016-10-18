@@ -81,6 +81,17 @@ $nav-font-size: 0.9rem;
 
   }
 
+  .nav-tabs {
+
+    .nav-item {
+
+      .nav-link {
+
+      }
+    }
+
+  }
+
 
 
 
@@ -107,7 +118,8 @@ $nav-font-size: 0.9rem;
   }
 
   .isotope--grid-item {
-    width: 25%;
+    padding-left: 0.5rem;
+    padding-right: 0.5rem;
   }
 
   .isotope--grid-item--width2 {
@@ -125,7 +137,37 @@ $nav-font-size: 0.9rem;
   }
 
   .category-exhibition {
-    width: 80%;
+    width: 100%;
+  }
+
+  .query-sorts {
+
+    margin-top: 1rem;
+
+    .query-label {
+      font-size: 0.9rem;
+    }
+
+    .options {
+      position: relative;
+      display: inline-block;
+      margin-left: 1rem;
+      margin-right: 1rem;
+
+      .option {
+        margin-left:0.5rem;
+
+        a {
+          color: #999;
+
+          &:hover {
+            color:#000;
+          }
+        }
+      }
+    }
+
+
   }
 
 }
