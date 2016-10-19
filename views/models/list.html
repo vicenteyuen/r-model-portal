@@ -7,7 +7,7 @@
 @{head('<script type="text/javascript" src="/js/typeahead.js"></script>')}
 
 <!-- set content -->
-<div class="clearfix m-y-2"></div>
+<div class="clearfix m-y-2-2"></div>
 
 <!-- body content -->
 <div class="container-fluid" id="main">
@@ -111,9 +111,9 @@
                 </div>
 
             </div>
-
         </div>
 
+        <!-- content layer -->
         <div class="col-lg-12">
 
             <!-- show container -->
@@ -125,38 +125,16 @@
 
                     @{foreach modelItem in repository.prodModels}
                     <div class="col-xs-6 col-sm-3 isotope--grid-item">
-                        <div>
-                            <figure class="effect-oscar img-thumbnail">
+                        <div class="img-thumbnail">
+                            <figure class="effect-oscar">
                                 <img src="@{modelItem.image}" alt="text">
                             </figure>
-                        </div>
-                        <div>
-                            <div class="model-card-name">
 
-
-
-
-
-                                <a class="model-name model-staffpicked" href="/models/7ede00c0dfe14574bd8f06ee36020609" title="swamp location">
-
-
-
-
-                                    <span class="model-name-label">swamp location</span>
-
-
-                                    <meta itemprop="award" content="Staff Pick">
-                                    <span class="flag-staffpicked" title="Staff Picks"></span>
-
-
-
-
-
-                                </a>
-
-
-
+                            <div class="model-card-meta">
+                                <div class="model-card-name">hello</div>
+                                <div class="model-name">yes</div>
                             </div>
+
                         </div>
 
                     </div>
@@ -165,6 +143,15 @@
 
                 </div>
 
+            </div>
+        </div>
+
+        <!--- load content --->
+        <div class="col-lg-12 container">
+
+            <div class="loadmore-area">
+
+                <a href="#" class="btn btn-primary btn-huge loadmore">加载更多</a>
             </div>
 
 

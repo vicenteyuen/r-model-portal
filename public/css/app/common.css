@@ -23,3 +23,13 @@ a.btn-primary:hover {
 .navbar-dark {
     background-color: #111;
 }
+
+.navbar .navbar-brand {
+    padding-top: 0.4rem;
+    padding-bottom: 0.4rem;
+}
+
+.m-y-2-2 {
+    margin-top: 2rem !important;
+    margin-bottom: 2rem !important;
+}
